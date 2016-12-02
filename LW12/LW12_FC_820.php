@@ -116,7 +116,7 @@ class LW12_FC_820 {
 		fputs ($fp, $command);
 		$ret = 0;
 		if($return > 0)
-			stream_set_timeout($fp, 0, 100000);
+			stream_set_timeout($fp, 0, 1000);
 			$ret= fgets($fp);
 		fclose($fp);
 		return $ret;
