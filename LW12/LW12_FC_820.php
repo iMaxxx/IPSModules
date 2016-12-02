@@ -109,7 +109,7 @@ class LW12_FC_820 {
 	
 	private function sendPacket($command, $return)
 	{
-		$fp = fsockopen("udp://" . $this->IP, $this->Port, $errno, $errstr, 10);
+		$fp = fsockopen("udp://" . $this->IP, $this->Port, $errno, $errstr, 1);
 		if (!$fp)
 		    throw new Exception("Error opening socket: ".$errstr." (".$errno.")");
 		$command = hex2bin($command);
